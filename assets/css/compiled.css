@@ -10,3 +10,24 @@
   /* Fonts */
   --ff-primary: 'Nunito', sans-serif;
   --fd-primary: 'Josefin Sans', sans-serif; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  color: var(--clr-grey-800);
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  line-height: 1.6; }
