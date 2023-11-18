@@ -1,4 +1,6 @@
 .nav {
+    grid-area: 1 / nav-start / -1 / nav-end;
+
     &--primary {
         background: var(--clr-primary);
     }

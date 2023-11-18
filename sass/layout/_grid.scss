@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+
+    &--layout {
+        grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [nav-start] 8rem [nav-end full-start] minmax(6rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 14rem)) minmax(min-content, 24rem) repeat(4, [col-end] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    &--2x1fr {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

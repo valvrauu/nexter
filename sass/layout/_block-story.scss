@@ -1,4 +1,6 @@
 .block-story {
+    grid-column: full-start / full-end;
+
     &__pictures {
         background: var(--clr-primary);
     }

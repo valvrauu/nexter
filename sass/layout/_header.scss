@@ -1,3 +1,5 @@
 .header {
+    grid-column: full-start / col-end 3;
+
     background: var(--clr-grey-900);
 }
