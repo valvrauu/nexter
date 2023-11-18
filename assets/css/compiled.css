@@ -31,3 +31,30 @@ body {
   font-family: var(--ff-primary);
   font-weight: 300;
   line-height: 1.6; }
+
+.block-features {
+  background: var(--clr-grey-200); }
+
+.block-gallery {
+  background: var(--clr-grey-900); }
+
+.block-homes {
+  background: var(--clr-secondary); }
+
+.block-realtors {
+  background: var(--clr-secondary); }
+
+.block-story__pictures {
+  background: var(--clr-primary); }
+
+.block-story__content {
+  background: var(--clr-grey-100); }
+
+.footer {
+  background: var(--clr-secondary); }
+
+.header {
+  background: var(--clr-grey-900); }
+
+.nav--primary {
+  background: var(--clr-primary); }

@@ -1,0 +1,9 @@
+.block-story {
+    &__pictures {
+        background: var(--clr-primary);
+    }
+
+    &__content {
+        background: var(--clr-grey-100);
+    }
+}
