@@ -6,7 +6,24 @@
         grid-template-columns: [nav-start] 8rem [nav-end full-start] minmax(6rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 14rem)) minmax(min-content, 24rem) repeat(4, [col-end] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end];
     }
 
+    &--feature {
+        grid-template-columns: min-content 1fr;
+        gap: 1.5rem 2.5rem;
+    }
+
     &--2x1fr {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--fit-25 {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    &--gap-6 {
+        gap: 6rem;
+    }
+
+    &--align-start {
+        align-items: start;
     }
 }

@@ -1,0 +1,13 @@
+.tertiary-title {
+    @extend %heading;
+
+    font-size: 1.9rem;
+
+    &--light {
+        color: var(--clr-grey-100);
+    }
+
+    &--dark {
+        color: var(--clr-grey-900);
+    }
+}
