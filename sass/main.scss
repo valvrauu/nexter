@@ -1,7 +1,10 @@
+@import "abstracts/extends";
 @import "abstracts/variables";
 
 @import "base/reset";
 @import "base/typography";
+
+@import "components/feature";
 
 @import "layout/block-features";
 @import "layout/block-gallery";

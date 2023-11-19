@@ -1,0 +1,16 @@
+.feature {
+    &__icon {
+        grid-row: 1 / span 2;
+
+        width: 4.5rem;
+        aspect-ratio: 1;
+
+        fill: var(--clr-primary);
+
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;  
+    }
+}
