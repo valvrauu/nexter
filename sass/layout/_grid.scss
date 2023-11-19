@@ -15,6 +15,11 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    &--6x1fr {
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+    }
+
     &--fit-25 {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
@@ -25,5 +30,9 @@
 
     &--align-start {
         align-items: start;
+    }
+
+    &--align-center {
+        align-items: center;
     }
 }
