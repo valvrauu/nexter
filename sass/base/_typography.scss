@@ -20,3 +20,11 @@
         color: var(--clr-grey-900);
     }
 }
+
+.quaternary-title {
+    @extend %heading;
+
+    color: var(--clr-ntrl-min);
+
+    font-size: 1.6rem;
+}

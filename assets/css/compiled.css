@@ -1,4 +1,4 @@
-.tertiary-title {
+.tertiary-title, .quaternary-title {
   font-family: var(--fd-primary);
   font-weight: 400; }
 
@@ -49,6 +49,10 @@ body {
   .tertiary-title--dark {
     color: var(--clr-grey-900); }
 
+.quaternary-title {
+  color: var(--clr-ntrl-min);
+  font-size: 1.6rem; }
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -70,6 +74,40 @@ body {
   .btn--primary:hover {
     background: var(--clr-grey-900); }
 
+.card-home {
+  background: var(--clr-grey-100); }
+  .card-home__img {
+    grid-area: 1 / 1 / 3 / -1;
+    display: block;
+    max-width: 100%; }
+  .card-home__like {
+    grid-area: 1 / 2 / 3 / 3;
+    justify-self: flex-end;
+    margin: 1rem;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    fill: var(--clr-primary); }
+  .card-home > .quaternary-title {
+    grid-area: 2 / 1 / 3 / -1;
+    justify-self: center;
+    width: 80%;
+    padding: 1.25rem;
+    background: var(--clr-secondary);
+    text-align: center;
+    transform: translateY(50%); }
+  .card-home > .btn {
+    grid-column: 1 / -1; }
+  .card-home__location, .card-home__rooms, .card-home__area, .card-home__price {
+    margin-left: 2rem; }
+  .card-home__location, .card-home__rooms {
+    margin-top: 2.5rem; }
+  .card-home__icon {
+    width: 2rem;
+    aspect-ratio: 1;
+    fill: var(--clr-primary); }
+  .card-home__text {
+    font-size: 1.5rem; }
+
 .feature__icon {
   grid-row: 1 / span 2;
   width: 4.5rem;
@@ -89,8 +127,8 @@ body {
   background: var(--clr-grey-900); }
 
 .block-homes {
-  grid-column: center-start / center-end;
-  background: var(--clr-secondary); }
+  margin: 15rem 0;
+  grid-column: center-start / center-end; }
 
 .block-realtors {
   grid-column: col-end 3 / full-end;
@@ -132,6 +170,10 @@ body {
     flex-direction: row; }
   .flex--column {
     flex-direction: column; }
+  .flex--gap-1 {
+    gap: 1rem; }
+  .flex--align-center {
+    align-items: center; }
   .flex--justify-center {
     justify-content: center; }
 
@@ -142,7 +184,7 @@ body {
 .grid {
   display: grid; }
   .grid--layout {
-    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: 80vh repeat(5, min-content);
     grid-template-columns: [nav-start] 8rem [nav-end full-start] minmax(6rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 14rem)) minmax(min-content, 24rem) repeat(4, [col-end] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end]; }
   .grid--feature {
     grid-template-columns: min-content 1fr;
@@ -154,8 +196,12 @@ body {
     grid-template-columns: repeat(6, 1fr); }
   .grid--fit-25 {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
+  .grid--gap-3-5 {
+    gap: 3.5rem 0; }
   .grid--gap-6 {
     gap: 6rem; }
+  .grid--gap-7 {
+    gap: 7rem; }
   .grid--align-start {
     align-items: start; }
   .grid--align-center {
