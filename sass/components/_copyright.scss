@@ -1,0 +1,15 @@
+.copyright {
+    &__text {
+        color: var(--clr-grey-200);
+    }
+
+    &--footer {
+        & .copyright__text {
+            margin: 6rem auto 0;
+            max-width: 70%;
+
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    }
+}
