@@ -20,8 +20,20 @@
         grid-template-columns: repeat(6, 1fr);
     }
 
+    &--7x5vw {
+        grid-template-rows: repeat(7, 5vw);
+    }
+
+    &--8x1fr {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
     &--fit-25 {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    &--gap-1-5 {
+        gap: 1.5rem;
     }
 
     &--gap-3-5 {
