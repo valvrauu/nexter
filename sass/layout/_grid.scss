@@ -28,12 +28,20 @@
         grid-template-columns: repeat(8, 1fr);
     }
 
+    &--fit-15 {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+
     &--fit-25 {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
 
     &--gap-1-5 {
         gap: 1.5rem;
+    }
+
+    &--gap-2 {
+        gap: 2rem;
     }
 
     &--gap-3-5 {

@@ -12,7 +12,7 @@
         <title>nexter &mdash; your home, your freedom</title>
     </head>
     <body class="grid grid--layout">
-        <nav class="nav nav--primary">
+        <nav class="nav nav--bar">
             NAV...
         </nav>
 
@@ -517,7 +517,43 @@
         </section>
 
         <footer class="footer">
-            Footer
+            <nav class="nav nav--footer">
+                <ul class="nav__list grid grid--fit-15 grid--gap-2">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link flex flex--center">Find your dream home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link flex flex--center">Request proposal</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link flex flex--center">Download home planner</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link flex flex--center">Contact us</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link flex flex--center">Submit your property</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link flex flex--center">Come work with us!</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="copyright copyright--footer">
+                <p class="copyright__text">
+                    &copy; Copyright <span class="copyright__year"></span> by Jonas Schmedtmann. Feel free to use this project for your own purposes. this does NOT apply if you plan to produce your own course or tutorials based on this project.
+
+                    <script>
+                        document.querySelector('.copyright__year').textContent = new Date().getFullYear();
+                    </script>
+                </p>
+            </div>
         </footer>
     </body>
 </html>
