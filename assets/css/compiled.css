@@ -74,6 +74,21 @@ body {
   .btn--primary:hover {
     background: var(--clr-grey-900); }
 
+.btn--burguer {
+  width: 4.5rem;
+  height: 2px;
+  background: var(--clr-ntrl-min); }
+  .btn--burguer::before, .btn--burguer::after {
+    content: '';
+    display: block;
+    width: 4.5rem;
+    height: 2px;
+    background: var(--clr-ntrl-min); }
+  .btn--burguer::before {
+    transform: translateY(-1.5rem); }
+  .btn--burguer::after {
+    transform: translateY(1.3rem); }
+
 .card-home {
   background: var(--clr-grey-100); }
   .card-home__img {
@@ -276,6 +291,7 @@ body {
     color: var(--clr-ntrl-min);
     text-decoration: none; }
   .nav--bar {
+    padding-top: 4rem;
     background: var(--clr-primary); }
   .nav--footer .nav__item {
     height: 100%; }

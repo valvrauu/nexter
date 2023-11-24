@@ -29,4 +29,26 @@
             background: var(--clr-grey-900);
         }
     }
+
+    &--burguer {
+        width: 4.5rem;
+        height: 2px;
+
+        background: var(--clr-ntrl-min);
+
+        &::before,
+        &::after {
+            content: '';
+
+            display: block;
+
+            width: 4.5rem;
+            height: 2px;
+
+            background: var(--clr-ntrl-min);
+        }
+
+        &::before { transform: translateY(-1.5rem); }
+        &::after { transform: translateY(1.3rem); }
+    }
 }
