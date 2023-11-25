@@ -18,6 +18,10 @@
         gap: 1.5rem 2.5rem;
     }
 
+    &--2xmax {
+        grid-template-columns: repeat(2, max-content);
+    }
+
     &--2x1fr {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -71,6 +75,10 @@
         gap: 7rem;
     }
 
+    &--gap-5vh {
+        gap: 5vh;
+    }
+
     &--align-start {
         align-items: start;
     }
@@ -81,5 +89,10 @@
 
     &--justify-center {
         justify-items: center;
+    }
+
+    &--center {
+        align-content: center;
+        justify-content: center;
     }
 }
