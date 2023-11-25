@@ -1,6 +1,4 @@
 .nav {
-    grid-area: 1 / nav-start / -1 / nav-end;
-
     &__list {
         list-style: none;
     }
@@ -12,24 +10,34 @@
     }
 
     &--bar {
-        padding-top: 4rem;
+        grid-area: 1 / nav-start / -1 / nav-end;
+
+        padding: 4rem 0;
+
         background: var(--clr-primary);
+
+        @include mq(medium) {
+            grid-area: 1 / 1 / 2 / -1;
+
+            padding: 0 4rem;
+
+            align-items: center;
+            justify-content: flex-end;
+        }
     }
 
     &--footer {
-        & .nav__item {
-            height: 100%;
-        }
+        font-size: 1.4rem;
+        font-family: var(--fd-primary);
+        text-transform: uppercase;
+        text-align: center;
+    }
 
+    &--effect {
         & .nav__link:link,
           .nav__link:visited {
             padding: 1.5rem;
             height: 100%;
-
-            font-size: 1.4rem;
-            font-family: var(--fd-primary);
-            text-transform: uppercase;
-            text-align: center;
 
             transition: all .2s;
 

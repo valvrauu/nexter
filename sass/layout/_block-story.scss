@@ -5,6 +5,11 @@
         background:
             linear-gradient(rgba(#c69963, 0.5), rgba(#c69963, 0.5)),
             url(../../assets/img/back.jpg) 0 0 / cover no-repeat;
+
+        @include mq(medium) {
+            grid-column: 1 / -1;
+            padding: 6rem;
+        }
     }
 
     &__img {
@@ -14,6 +19,10 @@
             grid-area: 2 / 2 / -2 / -2;
 
             box-shadow: 0 2rem 5rem rgba(#000, .1);
+
+            @include mq(medium) {
+                grid-area: 1 / 1 / -1 / -2;
+            }
         }
 
         &--second {
@@ -23,6 +32,11 @@
 
             box-shadow: 0 2rem 5rem rgba(#000, .2);
             z-index: 1;
+
+            @include mq(medium) {
+                grid-area: 1 / 4 / -1 / -1;
+                width: 100%
+            }
         }
     }
 
@@ -32,6 +46,11 @@
         padding: 6rem 8vw;
 
         background: var(--clr-grey-100);
+
+        @include mq(medium) {
+            grid-column: 1 / -1;
+            order: -1;
+        }
     }
 
     &__text {
