@@ -1,5 +1,27 @@
 .header {
+    padding: 4rem 8rem 8rem;
+
     grid-column: full-start / col-end 3;
 
-    background: var(--clr-grey-900);
+    background: 
+        linear-gradient(
+            rgba(#101d2c, .93), 
+            rgba(#101d2c, .93)
+        ),
+        url(../../assets/img/hero.jpeg) 
+        center/cover;
+
+    & .logo {
+        justify-self: center;
+    }
+
+    & .paragraph {
+        color: var(--clr-primary);
+        text-transform: uppercase;
+    }
+
+    & .btn {
+        align-self: flex-start;
+        justify-self: start;
+    }
 }
