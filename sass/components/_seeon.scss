@@ -1,0 +1,29 @@
+.seeon {
+    &__text {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        gap: 1.5rem;
+        align-items: center;
+
+        color: var( --clr-grey-200);
+
+        font-size: 1.6rem;
+
+        &::before,
+        &::after {
+            content: '';
+
+            display: block;
+
+            height: 1px;
+
+            background: currentColor;
+        }
+    }
+
+    &__logo {
+        max-height: 2.5rem;
+
+        filter: brightness(70%);
+    }
+}

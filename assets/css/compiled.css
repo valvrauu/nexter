@@ -1,4 +1,4 @@
-.tertiary-title, .quaternary-title {
+.primary-title, .tertiary-title, .quaternary-title, .paragraph {
   font-family: var(--fd-primary);
   font-weight: 400; }
 
@@ -37,6 +37,11 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+.primary-title {
+  color: var(--clr-grey-100);
+  font-size: 4.5rem;
+  line-height: 1; }
+
 .tertiary-title {
   font-size: 1.9rem; }
   .tertiary-title--story {
@@ -51,6 +56,9 @@ body {
 
 .quaternary-title {
   color: var(--clr-ntrl-min);
+  font-size: 1.6rem; }
+
+.paragraph {
   font-size: 1.6rem; }
 
 .btn,
@@ -141,6 +149,26 @@ body {
 
 .feature__text {
   font-size: 1.7rem; }
+
+.logo__img {
+  max-height: 3rem; }
+
+.seeon__text {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  color: var(--clr-grey-200);
+  font-size: 1.6rem; }
+  .seeon__text::before, .seeon__text::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: currentColor; }
+
+.seeon__logo {
+  max-height: 2.5rem;
+  filter: brightness(70%); }
 
 .block-features {
   grid-column: center-start / center-end;
@@ -248,11 +276,18 @@ body {
   .grid--layout {
     grid-template-rows: 80vh repeat(5, min-content);
     grid-template-columns: [nav-start] 8rem [nav-end full-start] minmax(6rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 14rem)) minmax(min-content, 24rem) repeat(4, [col-end] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end]; }
+  .grid--header {
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    row-gap: 1.5rem;
+    justify-content: center; }
   .grid--feature {
     grid-template-columns: min-content 1fr;
     gap: 1.5rem 2.5rem; }
   .grid--2x1fr {
     grid-template-columns: repeat(2, 1fr); }
+  .grid--4x1fr {
+    grid-template-columns: repeat(4, 1fr); }
   .grid--6x1fr {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr); }
@@ -268,6 +303,8 @@ body {
     gap: 1.5rem; }
   .grid--gap-2 {
     gap: 2rem; }
+  .grid--gap-3 {
+    gap: 0 3rem; }
   .grid--gap-3-5 {
     gap: 3.5rem 0; }
   .grid--gap-6 {
@@ -278,10 +315,21 @@ body {
     align-items: start; }
   .grid--align-center {
     align-items: center; }
+  .grid--justify-center {
+    justify-items: center; }
 
 .header {
+  padding: 4rem 8rem 8rem;
   grid-column: full-start / col-end 3;
-  background: var(--clr-grey-900); }
+  background: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../../assets/img/hero.jpeg) center/cover; }
+  .header .logo {
+    justify-self: center; }
+  .header .paragraph {
+    color: var(--clr-primary);
+    text-transform: uppercase; }
+  .header .btn {
+    align-self: flex-start;
+    justify-self: start; }
 
 .nav {
   grid-area: 1 / nav-start / -1 / nav-end; }
