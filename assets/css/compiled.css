@@ -32,6 +32,12 @@ html {
   min-height: 100dvh;
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   min-height: 100vh;
@@ -191,6 +197,8 @@ body {
     background: currentColor; }
 
 .seeon__logo {
+  max-width: 100%;
+  min-width: 2.5rem;
   max-height: 2.5rem;
   filter: brightness(70%); }
 
@@ -243,24 +251,43 @@ body {
 .block-realtors {
   grid-column: col-end 3 / full-end;
   background: var(--clr-secondary); }
+  @media only screen and (max-width: 37.5em) {
+    .block-realtors {
+      grid-area: 3 / 1 / 4 / -1;
+      padding: 2rem; } }
 
 .block-story {
   grid-column: full-start / full-end; }
   .block-story__pictures {
     background: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../../assets/img/back.jpg) 0 0/cover no-repeat; }
+    @media only screen and (max-width: 37.5em) {
+      .block-story__pictures {
+        grid-column: 1 / -1;
+        padding: 6rem; } }
   .block-story__img--first {
     width: 100%;
     grid-area: 2 / 2 / -2 / -2;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
+    @media only screen and (max-width: 37.5em) {
+      .block-story__img--first {
+        grid-area: 1 / 1 / -1 / -2; } }
   .block-story__img--second {
     width: 115%;
     grid-area: 3 / 4 / -1 / -1;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
     z-index: 1; }
+    @media only screen and (max-width: 37.5em) {
+      .block-story__img--second {
+        grid-area: 1 / 4 / -1 / -1;
+        width: 100%; } }
   .block-story__content {
     align-items: flex-start;
     padding: 6rem 8vw;
     background: var(--clr-grey-100); }
+    @media only screen and (max-width: 37.5em) {
+      .block-story__content {
+        grid-column: 1 / -1;
+        order: -1; } }
   .block-story__text--first {
     margin-bottom: 3rem;
     color: var(--clr-grey-900);
@@ -298,8 +325,12 @@ body {
 .grid {
   display: grid; }
   .grid--layout {
-    grid-template-rows: 80vh repeat(5, min-content);
+    grid-template-rows: minmax(min-content, 80vh) min-content minmax(min-content, 40vw) repeat(3, min-content);
     grid-template-columns: [nav-start] 8rem [nav-end full-start] minmax(6rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 14rem)) minmax(min-content, 24rem) repeat(4, [col-end] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end]; }
+    @media only screen and (max-width: 37.5em) {
+      .grid--layout {
+        grid-template-rows: 6rem minmax(min-content, calc(100vh - 6rem)) repeat(2, min-content) minmax(min-content, 40vw) repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 14rem)) minmax(min-content, 24rem) repeat(4, [col-end] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end]; } }
   .grid--header {
     grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
     grid-template-columns: minmax(min-content, max-content);
@@ -361,29 +392,44 @@ body {
   .header .btn {
     align-self: flex-start;
     justify-self: start; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      grid-column: full-start / full-end; } }
+  @media only screen and (max-width: 18.75em) {
+    .header {
+      padding: 2em 4rem 4rem; } }
 
-.nav {
-  grid-area: 1 / nav-start / -1 / nav-end; }
-  .nav__list {
-    list-style: none; }
-  .nav__link:link, .nav__link:visited {
-    color: var(--clr-ntrl-min);
-    text-decoration: none; }
-  .nav--bar {
-    padding-top: 4rem;
-    background: var(--clr-primary); }
-  .nav--footer {
-    font-size: 1.4rem;
-    font-family: var(--fd-primary);
-    text-transform: uppercase;
-    text-align: center; }
-  .nav--effect .nav__link:link,
-  .nav--effect .nav__link:visited {
-    padding: 1.5rem;
-    height: 100%;
-    transition: all .2s; }
-    .nav--effect .nav__link:link:hover, .nav--effect .nav__link:link:active,
-    .nav--effect .nav__link:visited:hover,
-    .nav--effect .nav__link:visited:active {
-      background: rgba(255, 255, 255, 0.05);
-      transform: translateY(-3px); }
+.nav__list {
+  list-style: none; }
+
+.nav__link:link, .nav__link:visited {
+  color: var(--clr-ntrl-min);
+  text-decoration: none; }
+
+.nav--bar {
+  grid-area: 1 / nav-start / -1 / nav-end;
+  padding: 4rem 0;
+  background: var(--clr-primary); }
+  @media only screen and (max-width: 37.5em) {
+    .nav--bar {
+      grid-area: 1 / 1 / 2 / -1;
+      padding: 0 4rem;
+      align-items: center;
+      justify-content: flex-end; } }
+
+.nav--footer {
+  font-size: 1.4rem;
+  font-family: var(--fd-primary);
+  text-transform: uppercase;
+  text-align: center; }
+
+.nav--effect .nav__link:link,
+.nav--effect .nav__link:visited {
+  padding: 1.5rem;
+  height: 100%;
+  transition: all .2s; }
+  .nav--effect .nav__link:link:hover, .nav--effect .nav__link:link:active,
+  .nav--effect .nav__link:visited:hover,
+  .nav--effect .nav__link:visited:active {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px); }

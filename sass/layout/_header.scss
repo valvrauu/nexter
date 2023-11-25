@@ -3,13 +3,12 @@
 
     grid-column: full-start / col-end 3;
 
-    background: 
+    background:
         linear-gradient(
-            rgba(#101d2c, .93), 
+            rgba(#101d2c, .93),
             rgba(#101d2c, .93)
         ),
-        url(../../assets/img/hero.jpeg) 
-        center/cover;
+        url(../../assets/img/hero.jpeg) center/cover;
 
     & .logo {
         justify-self: center;
@@ -23,5 +22,13 @@
     & .btn {
         align-self: flex-start;
         justify-self: start;
+    }
+
+    @include mq(medium) {
+        grid-column: full-start / full-end;
+    }
+
+    @include mq(small) {
+        padding: 2em 4rem 4rem;
     }
 }

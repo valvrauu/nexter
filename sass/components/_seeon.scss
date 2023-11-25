@@ -22,6 +22,8 @@
     }
 
     &__logo {
+        max-width: 100%;
+        min-width: 2.5rem;
         max-height: 2.5rem;
 
         filter: brightness(70%);
