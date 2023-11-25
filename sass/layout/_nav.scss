@@ -17,19 +17,17 @@
     }
 
     &--footer {
-        & .nav__item {
-            height: 100%;
-        }
+        font-size: 1.4rem;
+        font-family: var(--fd-primary);
+        text-transform: uppercase;
+        text-align: center;
+    }
 
+    &--effect {
         & .nav__link:link,
           .nav__link:visited {
             padding: 1.5rem;
             height: 100%;
-
-            font-size: 1.4rem;
-            font-family: var(--fd-primary);
-            text-transform: uppercase;
-            text-align: center;
 
             transition: all .2s;
 

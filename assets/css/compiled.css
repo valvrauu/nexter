@@ -368,19 +368,18 @@ body {
   .nav--bar {
     padding-top: 4rem;
     background: var(--clr-primary); }
-  .nav--footer .nav__item {
-    height: 100%; }
-  .nav--footer .nav__link:link,
-  .nav--footer .nav__link:visited {
-    padding: 1.5rem;
-    height: 100%;
+  .nav--footer {
     font-size: 1.4rem;
     font-family: var(--fd-primary);
     text-transform: uppercase;
-    text-align: center;
+    text-align: center; }
+  .nav--effect .nav__link:link,
+  .nav--effect .nav__link:visited {
+    padding: 1.5rem;
+    height: 100%;
     transition: all .2s; }
-    .nav--footer .nav__link:link:hover, .nav--footer .nav__link:link:active,
-    .nav--footer .nav__link:visited:hover,
-    .nav--footer .nav__link:visited:active {
+    .nav--effect .nav__link:link:hover, .nav--effect .nav__link:link:active,
+    .nav--effect .nav__link:visited:hover,
+    .nav--effect .nav__link:visited:active {
       background: rgba(255, 255, 255, 0.05);
       transform: translateY(-3px); }
